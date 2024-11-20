@@ -39,7 +39,8 @@ export class RecordsTableComponent implements OnInit {
   onEdit(student:any): void{
     alert('Edit Functionality will be implemented in record form')
   }
-
+  
+  // new line
   onDelete(student:any): void{
     const confirmDelete = confirm(`Are you sure you want to delete ${student.name}?`);
     if(confirmDelete){
