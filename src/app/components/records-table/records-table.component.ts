@@ -14,12 +14,12 @@ import { HttpClient } from '@angular/common/http';
 export class RecordsTableComponent implements OnInit {
 
   displayedColumns: string[] = ['name', 'contact', 'address', 'actions'];
-  dataSource = new MatTableDataSource([]);
+  dataSource = new MatTableDataSource<any>([]);
 
   // paginator and sort
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  data: never[] = [];
+  // data: never[] = [];
 
 
   constructor(private http: HttpClient, private dialog: MatDialog ){}
@@ -30,7 +30,8 @@ export class RecordsTableComponent implements OnInit {
 
   fetchRecords(): void {
     this.http.get<any[]>('http://localhost:3000/students').subscribe((data)=>{
-      this.dataSource.data = this.data;
+      console.log('Fetched data:', data);
+      this.dataSource.data = data;
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
