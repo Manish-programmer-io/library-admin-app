@@ -1,16 +1,58 @@
 {
-    "students": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "contact": "1234567890",
-            "address": "123 Main St"
-        },
-        {
-            "id": 2,
-            "name": "Jane Smith",
-            "contact": "0987654321",
-            "address": "456 Oak Rd"
-        }
-    ]
+  "students": [
+    {
+      "id": "4cf3",
+      "name": "Manish Soni",
+      "contact": "7007569840",
+      "address": "Mansarovar, jaipur",
+      "borrowDate": "2024-11-20T18:30:00.000Z",
+      "returnDate": "2024-11-22T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "3cd0",
+      "name": "Arpit Verma",
+      "contact": "7885496230",
+      "address": "Lal Kothi, Jaipur",
+      "borrowDate": "2024-11-19T18:30:00.000Z",
+      "returnDate": "2024-11-22T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "3e00",
+      "name": "Raj Gupta",
+      "contact": "5669845620",
+      "address": "Ashok Gandhi Marg, Jaipur",
+      "borrowDate": "2024-11-12T18:30:00.000Z",
+      "returnDate": "2024-11-15T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "356c",
+      "name": "Ayush Negi",
+      "contact": "8004698714",
+      "address": "Kothi Lal Kothi, jaipur",
+      "borrowDate": "2024-11-19T18:30:00.000Z",
+      "returnDate": "2024-11-22T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "4db3",
+      "name": "Atharv Parashar",
+      "contact": "7008596410",
+      "address": "Ajmeri Gate",
+      "borrowDate": "2024-11-17T18:30:00.000Z",
+      "returnDate": "2024-11-20T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "abd2",
+      "name": "Rohit Pal",
+      "contact": "8554798560",
+      "address": "Jaipur",
+      "borrowDate": "2024-11-19T18:30:00.000Z",
+      "returnDate": "2024-11-22T18:30:00.000Z",
+      "books": []
+    }
+  ]
 }

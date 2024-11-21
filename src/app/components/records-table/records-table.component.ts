@@ -33,6 +33,7 @@ export class RecordsTableComponent implements OnInit {
       console.log('Fetched data:', data);
       this.dataSource.data = data;
       this.dataSource.paginator = this.paginator;
+      console.log(this.dataSource.data);
       this.dataSource.sort = this.sort;
     });
   }

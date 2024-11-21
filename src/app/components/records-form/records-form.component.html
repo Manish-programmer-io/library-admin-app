@@ -1,1 +1,70 @@
-<p>records-form works!</p>
+<div class="form-container">
+    <form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+        <!-- Student Name -->
+        <mat-form-field appearance="fill" class="form-field">
+            <mat-label>
+                Student Name
+            </mat-label>
+            <input matInput formControlName="name">
+            <mat-error>
+                Name is required and should not exceed 15 characters.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Contact Number -->
+        <mat-form-field appearance="fill" class="form-field">
+            <mat-label>
+                Contact Number
+            </mat-label>
+            <input matInput formControlName="contact">
+            <mat-error>
+                Contact must be a valid phone number.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Address -->
+        <mat-form-field appearance="fill" class="form-field">
+            <mat-label>
+                Address
+            </mat-label>
+            <input matInput formControlName="address">
+        </mat-form-field>
+
+        <!-- Borrow Date -->
+        <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Borrow Date</mat-label>
+            <input matInput [matDatepicker]="borrowPicker" formControlName="borrowDate">
+            <mat-datepicker-toggle matSuffix [for]="borrowPicker"></mat-datepicker-toggle>
+            <mat-datepicker #borrowPicker></mat-datepicker>
+            <mat-error>
+                Borrow date is required.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Return Date -->
+        <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Return Date</mat-label>
+            <input matInput [matDatepicker]="returnPicker" formControlName="returnDate">
+            <mat-datepicker-toggle matSuffix [for]="returnPicker"></mat-datepicker-toggle>
+            <mat-datepicker #returnPicker></mat-datepicker>
+            <mat-error>
+                Return date must be later than the borrow date.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Book List -->
+        <div formArrayName="books" class="books-section">
+            <div *ngFor="let book of books.controls; let i = index" [formGroupName]="i" class="book-item">
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Book {{i+1}}</mat-label>
+                    <input matInput formControlName="title">
+                </mat-form-field>
+                <button mat-button color="warn" (click)="removeBook(i)">Remove</button>
+            </div>
+        </div>
+        <button mat-button color="primary" (click)="addBook()">Add Book</button>
+
+        <!-- Submit Button -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="recordForm.invalid"> Submit</button>
+    </form>
+</div>

@@ -22,6 +22,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -49,11 +55,17 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    MatDatepickerModule,
+    MatToolbarModule,
+    RouterModule,
+    DatePipe,
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideNativeDateAdapter()
   ],
   bootstrap: [AppComponent]
 })

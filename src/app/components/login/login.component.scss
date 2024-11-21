@@ -1,15 +1,15 @@
-.login-container{
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     top: 50;
     left: 0;
-    transform: translate(0,50%);
+    transform: translate(0, 50%);
 }
 
 .left-section,
-.right-section{
+.right-section {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -17,17 +17,21 @@
     text-align: center;
 }
 
-mat-card{
+mat-card {
     padding: 20px;
     width: 300px;
     text-align: center;
     margin-right: 250px;
 }
 
-.ermsg{
+.ermsg {
     margin-bottom: 10px;
 }
 
-.signin-img{
+.signin-img {
     margin-left: 200px;
+}
+
+.errmsg {
+    margin-top: 10px;
 }

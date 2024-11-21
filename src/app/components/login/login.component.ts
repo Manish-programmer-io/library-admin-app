@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   loginForm: FormGroup;
+  errorMessage:string='';
 
   constructor(private fb: FormBuilder, private router: Router){
     this.loginForm = this.fb.group({
@@ -27,7 +28,8 @@ export class LoginComponent {
       this.router.navigate(['/dashboard']);
     }
     else{
-      alert ('Wrong Username or Password')
+      this.errorMessage = 'Wrong Username or Password';
+      // alert ('Wrong Username or Password')
     }
   }
 

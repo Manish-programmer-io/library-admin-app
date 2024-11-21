@@ -4,8 +4,8 @@
     </div>
     <div class="left-section">
         <mat-card>
+            <img src="programmers-io.png">
             <h2>Sign-in</h2>
-            <h4>Library Administration App</h4>
             <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
                 <mat-form-field class="example-full-width" appearance="fill" class="ermsg">
                     <mat-label>Username</mat-label>
@@ -25,6 +25,9 @@
                 <button mat-raised-button color="primary" type="submit">
                     Login
                 </button>
+                <div class="errmsg">
+                    <mat-error *ngIf="errorMessage">{{errorMessage}}</mat-error>
+                </div>
             </form>
         </mat-card>
     </div>
