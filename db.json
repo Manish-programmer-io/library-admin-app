@@ -37,21 +37,12 @@
       "books": []
     },
     {
-      "id": "4db3",
-      "name": "Atharv Parashar",
-      "contact": "7008596410",
-      "address": "Ajmeri Gate",
-      "borrowDate": "2024-11-17T18:30:00.000Z",
-      "returnDate": "2024-11-20T18:30:00.000Z",
-      "books": []
-    },
-    {
-      "id": "abd2",
-      "name": "Rohit Pal",
-      "contact": "8554798560",
-      "address": "Jaipur",
-      "borrowDate": "2024-11-19T18:30:00.000Z",
-      "returnDate": "2024-11-22T18:30:00.000Z",
+      "id": "3b84",
+      "name": "Rwx",
+      "contact": "7007895641",
+      "address": "hugj",
+      "borrowDate": "2024-11-29T18:30:00.000Z",
+      "returnDate": "2024-11-24T18:30:00.000Z",
       "books": []
     }
   ]

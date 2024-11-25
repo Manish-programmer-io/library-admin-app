@@ -3,25 +3,28 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    top: 50;
+    top: 7;
     left: 0;
-    transform: translate(0, 50%);
+    transform: translate(0, 7%);
+    
 }
 
-.left-section,
-.right-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+ 
+// .left-section,
+// .right-section {
+//     flex: 1;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+// }
 
 mat-card {
     padding: 20px;
-    width: 300px;
+    width: 400px;
     text-align: center;
     margin-right: 250px;
+    margin-bottom: 55px;
 }
 
 .ermsg {
@@ -35,3 +38,39 @@ mat-card {
 .errmsg {
     margin-top: 10px;
 }
+
+// top bar
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.dshbrd-img{
+    width: 250px;
+}
+
+.clr-bg{
+    background: linear-gradient( rgba(0, 0, 0, 0.471), rgba(0, 0, 0, 0.401)), url(/main-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+
+.bg-imgs{
+    background-image: url(/bg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.spacer{
+    flex: 1;
+}
+

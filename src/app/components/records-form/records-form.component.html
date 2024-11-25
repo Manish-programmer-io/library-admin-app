@@ -33,7 +33,7 @@
         <!-- Borrow Date -->
         <mat-form-field appearance="fill" class="form-field">
             <mat-label>Borrow Date</mat-label>
-            <input matInput [matDatepicker]="borrowPicker" formControlName="borrowDate">
+            <input matInput [matDatepicker]="borrowPicker" [min]="minDate" formControlName="borrowDate">
             <mat-datepicker-toggle matSuffix [for]="borrowPicker"></mat-datepicker-toggle>
             <mat-datepicker #borrowPicker></mat-datepicker>
             <mat-error>
@@ -44,7 +44,7 @@
         <!-- Return Date -->
         <mat-form-field appearance="fill" class="form-field">
             <mat-label>Return Date</mat-label>
-            <input matInput [matDatepicker]="returnPicker" formControlName="returnDate">
+            <input matInput [matDatepicker]="returnPicker" [min]="minDate" formControlName="returnDate">
             <mat-datepicker-toggle matSuffix [for]="returnPicker"></mat-datepicker-toggle>
             <mat-datepicker #returnPicker></mat-datepicker>
             <mat-error>
@@ -59,10 +59,10 @@
                     <mat-label>Book {{i+1}}</mat-label>
                     <input matInput formControlName="title">
                 </mat-form-field>
-                <button mat-button color="warn" (click)="removeBook(i)">Remove</button>
+                <button mat-button color="warn" type="button" (click)="removeBook(i)">Remove</button>
             </div>
         </div>
-        <button mat-button color="primary" (click)="addBook()">Add Book</button>
+        <button mat-button color="primary" type="button" (click)="addBook()">Add Book</button>
 
         <!-- Submit Button -->
         <button mat-raised-button color="primary" type="submit" [disabled]="recordForm.invalid"> Submit</button>

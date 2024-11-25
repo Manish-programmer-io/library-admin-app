@@ -1,7 +1,17 @@
 .table-container{ 
     margin: 20px;
+    border: 2px solid black;
 }
 
 table{
     width: 100%;
+    
+}
+
+.icons{
+    margin-left: 10px;
+}
+
+.table-head{
+    background-color: rgba(105, 188, 255, 0.538);
 }

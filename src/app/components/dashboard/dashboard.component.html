@@ -1,27 +1,25 @@
-<mat-toolbar class="clr-bg">
-    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span> -->
-    <img src="programmers-io.png" class="dshbrd-img">
-    <span class="example-spacer"></span>
-    <!-- <mat-toolbar color="primary"> -->
-        <h3> <strong>Library Administration App</strong></h3>
+<div class="">
+    <mat-toolbar class="clr-bg">
+        <img src="programmers-io.png" class="dshbrd-img">
+        <span class="example-spacer"></span>
+        <h3> <strong style="color: aliceblue;">Library Administration App</strong></h3>
         <span class="spacer"></span>
-        <p class="dates">Date: {{ today | date:'dd-MM-yyyy' }}</p>
+        <p class="dates" style="color: aliceblue;">Date: {{ today | date:'dd-MM-yyyy' }}</p>
         <button class="lgbtn" mat-button (click)="onLogout()">Log-Out</button>
-    <!-- </mat-toolbar> -->
-    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon></mat-icon>
-    </button> -->
-</mat-toolbar>
-<div class="table-container bg-imgs">
-    <mat-tab-group>
-        <mat-tab label="Student Records">
-            <app-records-table></app-records-table>
-        </mat-tab>
-        <mat-tab label="Add/Update Student">
-            <app-records-form></app-records-form>
-        </mat-tab>
-    </mat-tab-group>
+    </mat-toolbar>
+
+    <div class="table-container">
+        <mat-tab-group [(selectedIndex)]="selectedTabIndex">
+            <mat-tab label="Student Records">
+                <app-records-table [records]="students" (editStudent)="onEditStudents($event)" (deleteStudent)="onDeleteStudent($event)">
+
+                </app-records-table>
+            </mat-tab>
+            <mat-tab label="Add/Update Student">
+                <app-records-form [selectStudent]="selectStudent" (formSubmit)="onFormSubmit($event)">
+
+                </app-records-form>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </div>

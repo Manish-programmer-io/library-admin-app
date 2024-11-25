@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',  
+  selector: 'app-login',
   standalone: false,
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
@@ -11,23 +11,26 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   loginForm: FormGroup;
-  errorMessage:string='';
+  errorMessage: string = '';
 
-  constructor(private fb: FormBuilder, private router: Router){
+  constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
 
-  onLogin(): void{
-    const {username, password} =this.loginForm.value;
+
+  onLogin(): void {
+    const { username, password } = this.loginForm.value;
+
 
     //Authentication Logic
-    if (username === 'admin' && password === 'admin123'){
+    if (username === 'admin' && password === 'admin123') {
+      localStorage.setItem('authToken', 'true')
       this.router.navigate(['/dashboard']);
     }
-    else{
+    else {
       this.errorMessage = 'Wrong Username or Password';
       // alert ('Wrong Username or Password')
     }

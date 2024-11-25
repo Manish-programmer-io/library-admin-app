@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RecordsFormComponent } from './components/records-form/records-form.component';
 import path from 'path';
 import { RecordsTableComponent } from './components/records-table/records-table.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -19,11 +20,13 @@ const routes: Routes = [
   },
   {
     path:'dashboard',
-    component:DashboardComponent
+    component:DashboardComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'records-table',
-    component:RecordsTableComponent
+    component:RecordsTableComponent,
+    canActivate:[AuthGuard]
   }
 ];
 
