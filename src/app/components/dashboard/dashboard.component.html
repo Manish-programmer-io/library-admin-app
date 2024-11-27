@@ -4,19 +4,18 @@
         <span class="example-spacer"></span>
         <h3> <strong style="color: aliceblue;">Library Administration App</strong></h3>
         <span class="spacer"></span>
-        <p class="dates" style="color: aliceblue;">Date: {{ today | date:'dd-MM-yyyy' }}</p>
+        <p class="dates" style="color: aliceblue;">Date: {{ today | date:'EEEE, MMMM dd, yyyy' }}</p>
         <button class="lgbtn" mat-button (click)="onLogout()">Log-Out</button>
     </mat-toolbar>
 
-    <div class="table-container">
+    <div class="table-container heads">
         <mat-tab-group [(selectedIndex)]="selectedTabIndex">
-            <mat-tab label="Student Records">
+            <mat-tab label="Student Records" class="heads">
                 <app-records-table [records]="students" (editStudent)="onEditStudents($event)" (deleteStudent)="onDeleteStudent($event)">
-
                 </app-records-table>
             </mat-tab>
-            <mat-tab label="Add/Update Student">
-                <app-records-form [selectStudent]="selectStudent" (formSubmit)="onFormSubmit($event)">
+            <mat-tab label="Add/Update Student" class="heads">
+                <app-records-form [selectedStudent]="selectStudent" (formSubmit)="onFormSubmit($event)">
 
                 </app-records-form>
             </mat-tab>

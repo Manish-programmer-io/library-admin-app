@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MatSnakBarService } from '../../services/mat-snak-bar.service';
 import { StudentService } from '../../services/student.service';
+import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
 
 
 @Component({
@@ -18,16 +19,17 @@ import { StudentService } from '../../services/student.service';
 
 export class RecordsTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'contact', 'address', 'actions'];
-  students = new MatTableDataSource<any>([]);
+  displayedColumns: string[] = ['name', 'contact', 'address', 'book', 'actions'];
+  students = new MatTableDataSource<string>([]);
   @Input() records: any[] = [];
+  selectedTabIndex = 0; //Default the index
   @Output() editStudent = new EventEmitter<any>();
   @Output()  deleteStudent = new EventEmitter<number>(); 
  
 
   // paginator and sort
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+  // @ViewChild(MatPaginator) paginator!: MatPaginator;
+  // @ViewChild(MatSort) sort!: MatSort;
 
 
 
@@ -38,41 +40,25 @@ export class RecordsTableComponent implements OnInit {
   }
 
   updateTable(): void{
-    this.students.data = this.records
+    this.students.data = this.records;
   }
 
-  // fetchRecords(): void {
-  //   this.http.get<any[]>('http://localhost:3000/students').subscribe((data)=>{
-  //     this.dataSource.data = data;
-  //     this.dataSource.paginator = this.paginator;
-  //     console.log(this.dataSource.data);
-  //     this.dataSource.sort = this.sort;
-  //   });
-    
+  // onEdit(student:any): void{
+  //   console.log('List', student);
+  //   this._snackBar.openSnackBar('Edit Functionality will be implemented in record form', 'Done');
+  //   this.editStudent.emit(student);
   // }
 
-  onEdit(student:any): void{
-    this._snackBar.openSnackBar('Edit Functionality will be implemented in record form', 'Done');
+  onEdit(student: any): void {
+    console.log('Editing Student:', student);
     this.editStudent.emit(student);
+    this.studentservice.setStudentData(student); // Send data to the shared service
+    this.selectedTabIndex = 1; // Switch to the form tab
   }
 
   onDelete(studentId:number): void{
     this.deleteStudent.emit(studentId);
-
   }
   
-  // onDelete(student: any): void {
-  //   const snackBarRef = this._snackBar.openConfirmationSnackBar(
-  //     `Are you sure you want to delete ${student.name} ?`, 
-  //     'Delete' // This is the action argument
-    // );
-  
-    // Handle the user clicking the 'Delete' action
-    // snackBarRef.onAction().subscribe(() => {
-    //   this.http.delete(`http://localhost:3000/students/${student.id}`).subscribe(() => {
-    //     this._snackBar.openSnackBar('User Deleted Successfully!', 'Done');
-    //     this.fetchRecords(); // Fetch records again to update the list
-  //     });
-  //   });
-  // }
+
 }

@@ -34,6 +34,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpRequestInterceptor } from './interceptors/http.interceptor';
 import { MatSnakBarService } from './services/mat-snak-bar.service';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DeleteConfirmationDialogComponent } from './components/delete-confirmation-dialog/delete-confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     DashboardComponent,
     RecordsTableComponent,
     RecordsFormComponent,
-    LoaderComponent
+    LoaderComponent,
+    DeleteConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,

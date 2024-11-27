@@ -1,48 +1,33 @@
 {
   "students": [
     {
-      "id": "4cf3",
+      "id": "7f55",
+      "name": "Arpit Shekhawat",
+      "contact": "7007854985",
+      "address": "Jaipur",
+      "book": "Arpit Verma",
+      "borrowDate": "2024-11-26T18:30:00.000Z",
+      "returnDate": "2024-11-27T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "ae03",
+      "name": "Manish",
+      "contact": "7007895410",
+      "address": "jaipur",
+      "book": "Story Tale",
+      "borrowDate": "2024-11-26T18:30:00.000Z",
+      "returnDate": "2024-11-28T18:30:00.000Z",
+      "books": []
+    },
+    {
+      "id": "b411",
       "name": "Manish Soni",
-      "contact": "7007569840",
-      "address": "Mansarovar, jaipur",
-      "borrowDate": "2024-11-20T18:30:00.000Z",
-      "returnDate": "2024-11-22T18:30:00.000Z",
-      "books": []
-    },
-    {
-      "id": "3cd0",
-      "name": "Arpit Verma",
-      "contact": "7885496230",
-      "address": "Lal Kothi, Jaipur",
-      "borrowDate": "2024-11-19T18:30:00.000Z",
-      "returnDate": "2024-11-22T18:30:00.000Z",
-      "books": []
-    },
-    {
-      "id": "3e00",
-      "name": "Raj Gupta",
-      "contact": "5669845620",
-      "address": "Ashok Gandhi Marg, Jaipur",
-      "borrowDate": "2024-11-12T18:30:00.000Z",
-      "returnDate": "2024-11-15T18:30:00.000Z",
-      "books": []
-    },
-    {
-      "id": "356c",
-      "name": "Ayush Negi",
-      "contact": "8004698714",
-      "address": "Kothi Lal Kothi, jaipur",
-      "borrowDate": "2024-11-19T18:30:00.000Z",
-      "returnDate": "2024-11-22T18:30:00.000Z",
-      "books": []
-    },
-    {
-      "id": "3b84",
-      "name": "Rwx",
-      "contact": "7007895641",
-      "address": "hugj",
-      "borrowDate": "2024-11-29T18:30:00.000Z",
-      "returnDate": "2024-11-24T18:30:00.000Z",
+      "contact": "7005896410",
+      "address": "Mansarovar",
+      "book": "Examples",
+      "borrowDate": "2024-11-26T18:30:00.000Z",
+      "returnDate": "2024-11-28T18:30:00.000Z",
       "books": []
     }
   ]

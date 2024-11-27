@@ -1,5 +1,6 @@
 <div class="form-container">
-    <form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="recordForm" (ngSubmit)="onSubmit(recordForm.value)">
+        
         <!-- Student Name -->
         <mat-form-field appearance="fill" class="form-field">
             <mat-label>
@@ -28,6 +29,17 @@
                 Address
             </mat-label>
             <input matInput formControlName="address">
+        </mat-form-field>
+
+         <!-- Book Name -->
+         <mat-form-field appearance="fill" class="form-field">
+            <mat-label>
+                Book Name
+            </mat-label>
+            <input matInput formControlName="book">
+            <mat-error>
+                Book is required.
+            </mat-error>
         </mat-form-field>
 
         <!-- Borrow Date -->
